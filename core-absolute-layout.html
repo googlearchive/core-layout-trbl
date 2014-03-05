@@ -5,7 +5,7 @@ license that can be found in the LICENSE file.
 -->
 <!--
 /**
- * @group Polymer Elements
+ * @group Polymer Core Elements
  *
  * `<core-absolute-layout>` arranges nodes horizontally via absolution positioning.
  * Set the `vertical` attribute (boolean) to arrange vertically instead.
@@ -124,25 +124,34 @@ license that can be found in the LICENSE file.
 <link rel="import" href="../polymer/polymer.html">
 
 <polymer-element name="core-absolute-layout" attributes="vertical">
+
   <template>
+
     <style>
       :host {
         display: none;
       }
     </style>
+
   </template>
+
   <script>
+
     Polymer('core-absolute-layout', {
+
       vertical: false,
+
       ready: function() {
         this.setAttribute('nolayout', '');
       },
-      enteredView: function() {
+
+      attached: function() {
         this.asyncMethod(function() {
           this.prepare();
           this.layout();
         });
       },
+
       prepare: function() {
         var parent = this.parentNode.host || this.parentNode;
         // explicit position harmful on <body>
@@ -171,6 +180,7 @@ license that can be found in the LICENSE file.
         });
         this.vertical = this.vertical || vertical;
       },
+
       /**
        * Arrange sibling nodes end-to-end in one dimension.
        *
@@ -243,12 +253,16 @@ license that can be found in the LICENSE file.
           });
         }
       }
+
     });
+
     function stylize(element, styles) {
       var style = element.style;
       Object.keys(styles).forEach(function(k){
         style[k] = styles[k];
       });
     }
+
   </script>
+  
 </polymer-element>

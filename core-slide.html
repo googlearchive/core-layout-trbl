@@ -6,45 +6,59 @@ license that can be found in the LICENSE file.
 <link rel="import" href="../polymer/polymer.html">
 
 <polymer-element name="core-slide" attributes="open closed vertical target targetId">
+
   <template>
+
     <style>
       :host {   
         display: none;
       }
     </style>
+
   </template>
+
   <script>
+
     Polymer('core-slide', {
+
       closed: false,
       open: true,
       vertical: false,
       targetId: '',
       target: null,
+
       ready: function() {
         this.setAttribute('nolayout', '');
       },
-      enteredView: function() {
+
+      attached: function() {
         this.target = this.parentNode;
       },
+
       targetIdChanged: function() {
         var p = this.parentNode;
         while (p.parentNode) {p = p.parentNode;};
         this.target = p.querySelector('#' + this.targetId);
       },
+
       targetChanged: function() {
         if (this.closed) {
           this.asyncMethod(this.update);
         }
       },
+
       toggle: function() {
         this.open = !this.open;
       },
+
       closedChanged: function() {
         this.open = !this.closed;
       },
+
       openChanged: function() {
         this.asyncMethod(this.update);
       },
+
       update: function() {
         this.closed = !this.open;
         if (this.target) {
@@ -63,6 +77,7 @@ license that can be found in the LICENSE file.
           }
         }
       },
+
       updateLeft: function() {
         var w = this.target.offsetWidth;
         var l = this.open ? 0 : -w;
@@ -80,6 +95,7 @@ license that can be found in the LICENSE file.
           s = s.nextElementSibling;
         }
       },
+
       updateRight: function() {
         var w = this.target.offsetWidth;
         var r = this.open ? 0 : -w;
@@ -103,6 +119,7 @@ license that can be found in the LICENSE file.
           s = previousElementSibling(s);
         }
       },
+
       updateTop: function() {
         var h = this.target.offsetHeight;
         var t = this.open ? 0 : -h;
@@ -120,6 +137,7 @@ license that can be found in the LICENSE file.
           s = s.nextElementSibling;
         }
       },
+
       updateBottom: function() {
         var h = this.target.offsetHeight;
         var b = this.open ? 0 : -h;
@@ -143,7 +161,9 @@ license that can be found in the LICENSE file.
           s = previousElementSibling(s);
         }
       }
+
     });
+    
     // TODO(sjmiles): temporary workaround for b0rked property in ShadowDOMPolyfill
     function previousElementSibling(e) {
       do {
@@ -151,5 +171,7 @@ license that can be found in the LICENSE file.
       } while (e && e.nodeType !== Node.ELEMENT_NODE);
       return e;
     };
+
   </script>
+  
 </polymer-element>

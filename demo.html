@@ -1,10 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+
+  <title>core-absolute-layout demo</title>
+
   <script src="../platform/platform.js"></script>
   <link rel="import" href="core-absolute-layout.html">
   <link rel="import" href="core-slide.html">
+
   <style>
     div {
       padding: 8px;
@@ -15,8 +18,10 @@
       border: 3px solid orange;
     }
   </style>
+
 </head>
 <body unresolved>
+
   <div style="height: 600px; overflow: hidden;">
     <core-absolute-layout></core-absolute-layout>
     <div id="left">Hi I'm some content</div>
@@ -39,5 +44,6 @@
   <core-slide id="rightSlide" targetid="right"></core-slide>
   <core-slide id="topSlide" vertical targetid="top"></core-slide>
   <core-slide id="bottomSlide" vertical targetid="bottom"></core-slide>
+  
 </body>
 </html>
