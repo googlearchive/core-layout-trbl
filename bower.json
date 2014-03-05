@@ -1,0 +1,7 @@
+{
+  "name": "core-absolute-layout",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#master"
+  }
+}
