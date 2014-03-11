@@ -10,10 +10,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 /**
  * @group Polymer Core Elements
  *
- * `<core-absolute-layout>` arranges nodes horizontally via absolute positioning.
+ * `<core-layout-trbl>` arranges nodes horizontally via absolute positioning.
  * Set the `vertical` attribute (boolean) to arrange vertically instead.
  * 
- * `<core-absolute-layout>` arranges it's <b>sibling elements</b>, not
+ * `<core-layout-trbl>` arranges it's <b>sibling elements</b>, not
  * it's children.
  *
  * One arranged node may be marked as elastic by giving it a `flex`
@@ -34,12 +34,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
  * Arrange three `div` into columns. `flex` attribute on Column Two makes that
  * column elastic.
  *
- *      <core-absolute-layout></core-absolute-layout>
+ *      <core-layout-trbl></core-layout-trbl>
  *      <div>Column One</div>
  *      <div flex>Column Two</div>
  *      <div>Column Three</div>
  *
- * Remember that `<core-absolute-layout>` arranges it's sibling elements, not it's children.
+ * Remember that `<core-layout-trbl>` arranges it's sibling elements, not it's children.
  *
  * If body has width 52 device pixels (in this case, ascii characters), call that 52px.
  * Column One has it's natural width of 12px (including border), Column Three has it's
@@ -69,7 +69,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
  *
  * Example:
  *
- *      <core-absolute-layout vertical></core-absolute-layout>
+ *      <core-layout-trbl vertical></core-layout-trbl>
  *      <div>Row One</div>
  *      <div flex>Row Two</div>
  *      <div>Row Three</div>
@@ -97,10 +97,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
  *
  * Layouts can be nested arbitrarily.
  *
- *      <core-absolute-layout></core-absolute-layout>
+ *      <core-layout-trbl></core-layout-trbl>
  *      <div>Menu</div>
  *      <div flex>
- *         <core-absolute-layout vertical></core-absolute-layout>
+ *         <core-layout-trbl vertical></core-layout-trbl>
  *         <div>Title</div>
  *         <div>Toolbar</div>
  *         <div flex>Main</div>
@@ -120,13 +120,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
  *      ||         ||Footer           ||
  *      --------------------------------
  *
- * @element core-absolute-layout
+ * @element core-layout-trbl
  *
  */
 -->
 <link rel="import" href="../polymer/polymer.html">
 
-<polymer-element name="core-absolute-layout" attributes="vertical">
+<polymer-element name="core-layout-trbl" attributes="vertical">
 
   <template>
 
@@ -140,7 +140,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <script>
 
-    Polymer('core-absolute-layout', {
+    Polymer('core-layout-trbl', {
 
       vertical: false,
 

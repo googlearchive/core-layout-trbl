@@ -11,10 +11,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html>
 <head>
 
-  <title>core-absolute-layout demo</title>
+  <title>core-layout-trbl demo</title>
 
   <script src="../platform/platform.js"></script>
-  <link rel="import" href="core-absolute-layout.html">
+  <link rel="import" href="core-layout-trbl.html">
   <link rel="import" href="core-slide.html">
 
   <style>
@@ -32,12 +32,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <body unresolved>
 
   <div style="height: 600px; overflow: hidden;">
-    <core-absolute-layout></core-absolute-layout>
+    <core-layout-trbl></core-layout-trbl>
     <div id="left">Hi I'm some content</div>
     <div id="left2" onclick="leftSlide.closed = !leftSlide.closed;">Click Me First</div>
     <div onclick="leftSlide2.closed = !leftSlide2.closed;">Click Me Second</div>
     <div fit>
-      <core-absolute-layout vertical></core-absolute-layout>
+      <core-layout-trbl vertical></core-layout-trbl>
       <div id="top">Gribble gribble</div>
       <div onclick="topSlide.closed = !topSlide.closed;">Click Me</div>
       <div fit>Squids!</div>

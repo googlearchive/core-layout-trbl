@@ -1,2 +1,3 @@
-core-absolute-layout
+core-layout-trbl
 ====================
+See //polymer.github.io/core-layout-trbl

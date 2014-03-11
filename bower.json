@@ -1,5 +1,5 @@
 {
-  "name": "core-absolute-layout",
+  "name": "core-layout-trbl",
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master"
