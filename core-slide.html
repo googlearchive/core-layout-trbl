@@ -14,7 +14,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
 
     <style>
-      :host {   
+      :host {
         display: none;
       }
     </style>
@@ -41,7 +41,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       targetIdChanged: function() {
         var p = this.parentNode;
-        while (p.parentNode) {p = p.parentNode;};
+        while (p.parentNode) {p = p.parentNode;}
         this.target = p.querySelector('#' + this.targetId);
       },
 
@@ -112,7 +112,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               break;
             }
             r += w;
-            s.style.right = r + 'px';  
+            s.style.right = r + 'px';
             w = s.offsetWidth;
           }
           //if (s == s.previousElementSibling) {
@@ -154,7 +154,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               break;
             }
             b = b + h;
-            s.style.bottom = b + 'px';  
+            s.style.bottom = b + 'px';
             h = s.offsetHeight;
           }
           //if (s == s.previousElementSibling) {
@@ -167,15 +167,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
     });
-    
+
     // TODO(sjmiles): temporary workaround for b0rked property in ShadowDOMPolyfill
     function previousElementSibling(e) {
       do {
         e = e.previousSibling;
       } while (e && e.nodeType !== Node.ELEMENT_NODE);
       return e;
-    };
+    }
 
   </script>
-  
+
 </polymer-element>
