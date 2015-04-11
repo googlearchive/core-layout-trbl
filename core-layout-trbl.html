@@ -154,7 +154,7 @@ Renders something like this
 
       prepare: function() {
         var parent = this.parentNode.host || this.parentNode;
-        // explicit position harmful on <body>
+        // explicit position harmful on body
         if (parent.localName !== 'body') {
         // may recalc
           var cs = window.getComputedStyle(parent);
